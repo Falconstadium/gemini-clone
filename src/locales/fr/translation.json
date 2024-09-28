@@ -1,0 +1,14 @@
+{
+  "hero":{
+    "greeting": "Salut,",
+    "description": "Comment puis-je vous aider aujourd’hui?",
+    "input": "Demandez-moi n’importe quoi.."
+  },
+  "sidebar":{
+    "chat": "nouveau chat",
+    "recent": "récent"
+  },
+  "footer":{
+    "parag": "Choisissez votre langue:"
+  }
+}

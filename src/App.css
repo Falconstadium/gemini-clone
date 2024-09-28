@@ -1,0 +1,16 @@
+.home {
+  display: grid;
+  min-height: 100dvh;
+  width: 100%;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'aside main main' 'aside main main' 'aside main main';
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.main {
+  grid-area: main;
+}
