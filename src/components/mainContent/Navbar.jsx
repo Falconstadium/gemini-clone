@@ -5,12 +5,6 @@ const Navbar = () => {
   
   const addDarkMode = () => {
     document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    localStorage.setItem('darkMode', isDark);
-  }
-  const darkTheme = localStorage.getItem('darkMode');
-  if (darkTheme) {
-    document.body.classList.add('dark-theme');
   }
 
   return (

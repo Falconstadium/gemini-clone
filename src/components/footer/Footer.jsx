@@ -9,25 +9,25 @@ const Footer = () => {
     i18n.changeLanguage(lang);
   };
 
+  const footer = document.getElementById('footer');
   const remove = () => {
     footer.style.display = 'none';
   };
  
   
-  const footer = document.getElementById('footer');
 
 
   return (
     <footer id='footer'>
       <p>{t('footer.parag')}</p>
       <div className='btns'>
-        <button onClick={() => handleChangeLang('fr')} type="submit">
-          Français
-        </button>
-        <button onClick={() => handleChangeLang('en')} type="submit">
+        <button onClick={() => handleChangeLang('en')}>
           English
         </button>
-        <button type="submit" id="remove-footer" onClick={remove}>
+        <button onClick={() => handleChangeLang('fr')}>
+          Français
+        </button>
+        <button type="submit" onClick={remove}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
