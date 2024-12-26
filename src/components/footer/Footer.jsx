@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './Footer.css'
+import { useState } from 'react';
 
 const Footer = () => {
   const { t, i18n } = useTranslation('global');
@@ -9,16 +10,17 @@ const Footer = () => {
     i18n.changeLanguage(lang);
   };
 
-  const footer = document.getElementById('footer');
-  const remove = () => {
-    footer.style.display = 'none';
+  const [remove, setRemove] = useState(false);
+
+  const hideFooter = () => {
+    setRemove(true)
   };
  
   
 
 
   return (
-    <footer id='footer'>
+    <footer className={remove ? "hide" : null}>
       <p>{t('footer.parag')}</p>
       <div className='btns'>
         <button onClick={() => handleChangeLang('en')}>
@@ -27,7 +29,7 @@ const Footer = () => {
         <button onClick={() => handleChangeLang('fr')}>
           Français
         </button>
-        <button type="submit" onClick={remove}>
+        <button type="submit" onClick={hideFooter}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

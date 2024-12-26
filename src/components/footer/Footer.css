@@ -10,6 +10,10 @@ footer {
   right: 0;
 }
 
+footer.hide {
+  display: none;
+}
+
 footer p {
   font-size: 1.2rem;
 }
